@@ -16,13 +16,32 @@ const App = () => {
   ])
 
   const handleGamePlay = (clickedSquare) => {
-    alert(clickedSquare)
+    let updateBoard = [...board]
+    updateBoard[clickedSquare] = "🌴"
+    setBoard(updateBoard)
   }
 
+  const reset = () => {
+    setBoard([
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?",
+      "?"
+    ])
+  }
+  
 
   return (
     <>
       <h1>Treasure Hunt Game</h1>
+      <div className='resetButton'>
+        <button onClick={reset}>Reset</button>
+      </div>
       <div className="gameBoard">
         {board.map((square, i) => {
           return (

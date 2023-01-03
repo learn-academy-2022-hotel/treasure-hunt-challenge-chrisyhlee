@@ -21,3 +21,8 @@ h1 {
   max-width: 610px;
   margin: 0 auto;
 }
+
+.resetButton {
+  display: flex;
+  justify-content: center;
+}
